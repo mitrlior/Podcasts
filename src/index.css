@@ -10,7 +10,19 @@ html {
 
 body {
   margin: 0;
-  background: #4d4d4d;
+  background: #142642;
+  padding: 16px;
+  padding-top: center;
+  padding-left: 35px;
+  color: rgb(255, 255, 255);
+}
+
+.header-h1 {
+  color:rgb(131, 154, 255);
+  font-size: 28px;
+  font-family: Impact, Charcoal, sans-serif;
+  word-spacing: 1.6px;
+  font-weight: 700;
 }
 
 .slide-in-left-enter {

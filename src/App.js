@@ -17,7 +17,7 @@ const App = () => {
 
           <Route path="/users" />
           <Route path="/:userId/podcasts" />
-          <Route path="/addpodcast/new" />
+          {/* <Route path="/addpodcast/new" /> */}
           <Route path="/login" element={<LoginForm></LoginForm>} />
         </Routes>
       </main>

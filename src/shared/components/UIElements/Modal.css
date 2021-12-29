@@ -10,10 +10,15 @@
 }
 
 .modal__header {
-	width: 100%;
+	/* width: 100%;
 	padding: 1rem 0.5rem;
 	background: #2a006e;
-	color: white;
+	color: white; */
+	color:rgb(131, 154, 255);
+  font-size: 28px;
+  font-family: Impact, Charcoal, sans-serif;
+  word-spacing: 1.6px;
+  font-weight: 700;
 }
 
 .modal__header h2 {
