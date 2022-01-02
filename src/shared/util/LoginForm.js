@@ -5,6 +5,8 @@ import { Navigate } from "react-router-dom";
 
 import { signin } from "../../actions/usersActions";
 
+
+
 const LoginForm = (props) => {
   const user = useSelector((state) => state.user);
   const dispach = useDispatch();
@@ -35,27 +37,30 @@ const LoginForm = (props) => {
 
   return (
     <form>
-      <label>
-        Email
-        <input
-          type="text"
-          name="email"
-          value={email}
-          onChange={(event) => setEmail(event.target.value)}
-        />
-      </label>
-      <label>
-        <br />
-        Domain:
-        <input
-          type="text"
-          name="email"
-          value={domain}
-          onChange={(event) => setDomain(event.target.value)}
-        />
-      </label>
-      <input type="submit" onClick={(event) => handleSubmit(event)} />
-      {user.isLoggedIn ? <Navigate to={"/"} /> : null}
+      <div>
+        <label>
+        Email: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               
+          <input
+            type="text"
+            name="email"
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}/>
+        </label>
+        <br/> <br/>
+        <label>
+          Domain: &nbsp;
+          <input
+            type="text"
+            name="email"
+            value={domain}
+            onChange={(event) => setDomain(event.target.value)}/>
+        </label>
+        <br/> <br/>
+
+        <input type="submit" onClick={(event) => handleSubmit(event)} />
+        {user.isLoggedIn ? <Navigate to={"/"} /> : null}
+      </div>  
     </form>
   );
 };
