@@ -30,7 +30,6 @@ const LoginForm = () => {
 			}
 		});
 	};
-
 	return (
 		<div>
 			{user.isLoggedIn ? (

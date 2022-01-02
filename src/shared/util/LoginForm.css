@@ -1,0 +1,11 @@
+.body{
+  align-items: center;
+  color: white;
+  font: 18px "Menlo";
+  text-align: right;
+  padding: 10px;
+}
+
+.button{
+  padding: 6px;
+}
