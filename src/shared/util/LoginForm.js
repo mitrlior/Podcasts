@@ -5,6 +5,8 @@ import { useNavigate, NavLink } from 'react-router-dom';
 
 import { signin } from '../../actions/usersActions';
 import SignUpForm from './SignUpForm';
+import './Forms.css';
+
 
 const LoginForm = () => {
 	const user = useSelector((state) => state.user);
@@ -35,19 +37,20 @@ const LoginForm = () => {
 			{user.isLoggedIn ? (
 				<SignUpForm />
 			) : (
-				<form>
+				<form><br/>
+
 					<label>
-						Email
+						Email:  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						<input
 							type="text"
 							name="email"
 							value={email}
-							onChange={(event) => setEmail(event.target.value)}
-						/>
+							onChange={(event) => setEmail(event.target.value)}/>
 					</label>
-					<label>
-						<br />
-						Domain:
+					<br/>
+					<br/>
+					<label>	
+						Domain: &nbsp;&nbsp;
 						<input
 							type="text"
 							name="email"
@@ -55,9 +58,12 @@ const LoginForm = () => {
 							onChange={(event) => setDomain(event.target.value)}
 						/>
 					</label>
-					<input type="submit" onClick={(event) => handleSubmit(event)} />
+					
 				</form>
 			)}
+			<br/><br/>
+			<input className="button" type="submit" onClick={(event) => handleSubmit(event)} />
+			<br/>
 			Not register? click <NavLink to="/signup">here</NavLink>
 		</div>
 	);

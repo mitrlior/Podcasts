@@ -15,14 +15,22 @@ body {
   padding-top: center;
   padding-left: 35px;
   color: rgb(255, 255, 255);
+  align-items: center;
+  text-align: left !important;
 }
 
-.header-h1 {
+h1 {
   color:rgb(131, 154, 255);
   font-size: 28px;
-  font-family: Impact, Charcoal, sans-serif;
+  font-family: Charcoal, sans-serif;
   word-spacing: 1.6px;
   font-weight: 700;
+}
+
+button{
+  padding: 4px 30px;
+  background-color: #52affc;
+  color: white;
 }
 
 .slide-in-left-enter {

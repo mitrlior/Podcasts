@@ -1,0 +1,12 @@
+
+div{
+  align-items: center !important;
+  text-align: center !important;
+}
+
+.button{
+  padding: 6px 40px;
+  size: 24px;
+  background-color: #52affc;
+  color: white;
+}
