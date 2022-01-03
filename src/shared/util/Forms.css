@@ -5,8 +5,13 @@ div{
 }
 
 .button{
+  margin: 10px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-bottom: 18px;
   padding: 6px 40px;
-  size: 24px;
-  background-color: #52affc;
+  size: 40px;
+  background-color: #0086f3;
+  border-radius: 6px;
+  border-color: #0086f3;
   color: white;
 }

@@ -15,10 +15,13 @@ const NavLinks = (props) => {
 				</NavLink>
 			</li>
 			<li>
-				<NavLink to="/u1/podcasts">My Podcasts</NavLink>
+				<NavLink to="/src\shared\util\Podcasts.js">My Podcasts</NavLink>
 			</li>
 			<li>
 				<NavLink to="/podcasts/new">Add Podcast</NavLink>
+			</li>		
+			<li>
+				<NavLink to="/signup">Signup</NavLink>
 			</li>
 			<li>
 				{user.isLoggedIn ? (

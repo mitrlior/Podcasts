@@ -4,7 +4,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate, NavLink } from 'react-router-dom';
 
 import { signin } from '../../actions/usersActions';
-import SignUpForm from './SignUpForm';
 import './Forms.css';
 
 
@@ -35,10 +34,9 @@ const LoginForm = () => {
 	return (
 		<div>
 			{user.isLoggedIn ? (
-				<SignUpForm />
+				<div/>
 			) : (
 				<form><br/>
-
 					<label>
 						Email:  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						<input
@@ -53,7 +51,7 @@ const LoginForm = () => {
 						Domain: &nbsp;&nbsp;
 						<input
 							type="text"
-							name="email"
+							name="domain"
 							value={domain}
 							onChange={(event) => setDomain(event.target.value)}
 						/>
@@ -61,10 +59,10 @@ const LoginForm = () => {
 					
 				</form>
 			)}
-			<br/><br/>
+			<br/>
 			<input className="button" type="submit" onClick={(event) => handleSubmit(event)} />
 			<br/>
-			Not register? click <NavLink to="/signup">here</NavLink>
+			Not register? click <NavLink to="/signup" >here</NavLink>
 		</div>
 	);
 };

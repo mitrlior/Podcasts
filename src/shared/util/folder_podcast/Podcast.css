@@ -1,0 +1,32 @@
+.Podcast-box{
+  display: inline-block;
+  width: 50%;
+  background-color: rgb(0, 82, 165);
+  color: white; 
+  margin: 16px;
+  padding: 16px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgb(204, 204, 204);
+}
+
+div{
+  text-align: center;
+  align-items: center;
+}
+
+hr{
+  size: 6px;
+  border-color: rgb(105, 180, 255);
+  width: 45%;
+  margin: 5px;
+}
+
+button{
+  padding: 16px;
+  background-color: rgb(1, 122, 243);
+  border-radius: 7px;
+  margin: 8px;
+  border-color: rgb(1, 122, 243);
+}
+
