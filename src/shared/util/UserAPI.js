@@ -36,7 +36,7 @@ const Userr = (props) => {
       </Row>
       <Row>
           <Col sm={12}>
-          <label>Username:&nbsp;&nbsp;</label>
+          <label>Avatar:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
 					<input type="text" name="username" value={"Avatar"}></input>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <button>Update</button>
