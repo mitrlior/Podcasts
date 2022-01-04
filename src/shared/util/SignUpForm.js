@@ -12,7 +12,7 @@ const SignUp = () => {
 	const [email, setEmail] = useState('mitrliorPlayer@gmail.com');
 	const [username, setUsername] = useState('Lior');
 	const [avatar, setAvatar] = useState('MyAvatar');
-	const [role, setRole] = useState('Player');
+	const [role, setRole] = useState('PLAYER');
 
 	let navigate = useNavigate();
 
@@ -29,7 +29,6 @@ const SignUp = () => {
 			role: role,
 			username: username,
 			avatar: avatar,
-			role: role,
 		});
 		console.log(config.data);
 		axios.post(url, body, config).then((res) => {
