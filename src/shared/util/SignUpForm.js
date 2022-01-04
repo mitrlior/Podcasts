@@ -10,13 +10,13 @@ const SignUp = () => {
 	const dispach = useDispatch();
 
 	const [email, setEmail] = useState('mitrliorPlayer@gmail.com');
-	const [domain, setDomain] = useState('2022a.Lior.Mitrany');
-	const [name, setName] = useState('Lior');
+	const [username, setUsername] = useState('Lior');
 	const [avatar, setAvatar] = useState('MyAvatar');
+	const [role, setRole] = useState('Player');
 
 	let navigate = useNavigate();
 
-	const handleSubmit = async function (event) {
+	const handleSubmit = async function(event) {
 		event.preventDefault();
 		const url = `http://localhost:8094/iob/users`;
 		const config = {
@@ -26,14 +26,14 @@ const SignUp = () => {
 		};
 		const body = JSON.stringify({
 			email: email,
-			role: 'PLAYER',
-			username: name,
+			role: role,
+			username: username,
 			avatar: avatar,
+			role: role,
 		});
 		console.log(config.data);
 		axios.post(url, body, config).then((res) => {
 			console.log(`${res.status}`);
-			// console.log('bla');
 			if (res.status === 200) {
 				window.alert('User added');
 				navigate('/');
@@ -42,42 +42,60 @@ const SignUp = () => {
 				console.log(res.statusText);
 			}
 		});
-		// console.log('bla');
 	};
 	return (
 		<div>
-		 	<h1>Sign-Up</h1>
-      <hr/>
+			<h1>Sign-Up</h1>
+			<hr />
 			<form>
 				<div>
 					<br />
 					<label>Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-					<input type="email" name="email" value={email}></input>
-				</div>
-				<br />
-				<div>
-					<label>Domain:&nbsp;&nbsp;&nbsp;</label>
-					<input type="text" name="domain" value={domain}></input>
+					<input
+						type="email"
+						name="email"
+						value={email}
+						onChange={(event) => setEmail(event.target.value)}
+					></input>
 				</div>
 				<br />
 				<div>
 					<label>Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-					<input type="text" name="name" value={name}></input>
+					<input
+						type="text"
+						name="name"
+						value={username}
+						onChange={(event) => setUsername(event.target.value)}
+					></input>
 				</div>
 				<br />
 				<div>
 					<label>Avatar:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-					<input type="text" name="avatar" value={avatar}></input>
+					<input
+						type="text"
+						name="avatar"
+						value={avatar}
+						onChange={(event) => setAvatar(event.target.value)}
+					></input>
 				</div>
 				<br />
-				{/* <label><checkbox/> is Admin ?</label> */}
+				<div>
+					<label>Role:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+					<input
+						type="text"
+						name="role"
+						value={role}
+						onChange={(event) => setRole(event.target.value)}
+					></input>
+				</div>
+				<br />
 			</form>
 			<input
 				className="button"
 				type="submit"
 				onClick={(event) => handleSubmit(event)}
 			/>
-		<hr/>
+			<hr />
 		</div>
 	);
 };

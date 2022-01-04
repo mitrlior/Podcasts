@@ -29,6 +29,8 @@ const LoginForm = () => {
 				user.avatar = res.data.avatar;
 				window.alert('login succeed');
 				navigate('/');
+			}else {
+				window.alert("Something went wrong... please try again")
 			}
 		});
 	};
