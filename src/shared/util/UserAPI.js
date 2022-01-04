@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-grid-system';
-
+import SingleUser from './folder_user/user_card.js';
 
 const Userr = (props) => {
 
@@ -8,6 +8,7 @@ const Userr = (props) => {
     <div className="Userr">
       <h1>User Options</h1>
       <hr/>
+      <SingleUser/>
       <Container>
       <Row>
         <Col sm={12}>
@@ -42,6 +43,8 @@ const Userr = (props) => {
           </Col>
       </Row>
       </Container>
+      <div>
+      </div>
     <hr/>
     </div>  
   )

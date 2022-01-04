@@ -1,5 +1,5 @@
 .usercard-box{
-  width: 65%;
+  width: 35%;
   display: inline-block;
   margin: 16px;
   padding: 16px;
@@ -11,9 +11,5 @@
   box-sizing: border-box;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgb(204, 204, 204);
-}
-
-div{
-  text-align: center;
-  align-items: center;
+  text-align: left !important;
 }

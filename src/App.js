@@ -14,6 +14,7 @@ import SignUp from './shared/util/SignUpForm';
 import Adminn from './shared/util/AdminAPI';
 import Userr from './shared/util/UserAPI';
 import Podcast from './shared/util/folder_podcast/Podcast';
+import SingleUser from './shared/util/folder_user/user_card';
 
 const App = () => {
 	const user = useSelector((state) => state.user);
@@ -26,6 +27,7 @@ const App = () => {
 					<Route exact path="/" element={<h1>Hello {user.username}</h1>} />
 					<Route path="/users" />
 					<Route path="/:userId/podcasts" />
+					<Route path="/singleuser" element={<SingleUser />} />
 					<Route path="/podcast" element={<Podcast/>} />
 					{/* <Route path="/addpodcast/new" /> */}
 					<Route path="/adminn" element={<Adminn/>} />
