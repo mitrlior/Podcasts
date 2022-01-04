@@ -36,9 +36,12 @@ const LoginForm = () => {
 			{user.isLoggedIn ? (
 				<div/>
 			) : (
-				<form><br/>
-					<label>
-						Email:  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<div>
+				<h1>Sign-Up</h1>
+      	<hr/>
+				<form>
+					<label><br/>
+						Email:  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						<input
 							type="text"
 							name="email"
@@ -56,13 +59,16 @@ const LoginForm = () => {
 							onChange={(event) => setDomain(event.target.value)}
 						/>
 					</label>
-					
 				</form>
+				</div>
 			)}
 			<br/>
 			<input className="button" type="submit" onClick={(event) => handleSubmit(event)} />
 			<br/>
 			Not register? click <NavLink to="/signup" >here</NavLink>
+			<br/><br/>
+			<hr/>
+
 		</div>
 	);
 };
