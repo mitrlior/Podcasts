@@ -20,9 +20,10 @@ const NavLinks = (props) => {
 			<li>
 				<NavLink to="/podcasts/new">Add Podcast</NavLink>
 			</li>		
-			<li>
+			{user.isLoggedIn ? null :
+			<li> 
 				<NavLink to="/signup">Signup</NavLink>
-			</li>
+			</li> }
 			<li>
 				{user.isLoggedIn ? (
 					<NavLink to="/signout">Signout</NavLink>
