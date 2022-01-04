@@ -28,6 +28,23 @@ const Adminn = (props) => {
 		});
 	};
 
+  const getAllActivities = () => {
+    const getAllActivitiesUrl = `http://localhost:8094/iob/admin/users/${user.domain}/${user.email}`;
+		console.log(getAllActivitiesUrl);
+		const config = {
+			headers: {
+				'Content-Type': 'application/json',
+			},
+		};
+		axios.get(getAllActivitiesUrl, config).then((res) => {
+			console.log(res.data);
+			if (res.status === 200) {
+				setMainBody(<AllActivities usersList={res.data} />);
+				console.log(mainBody);
+			}
+		});
+	};
+
 	const deleteAllUsers = () => {
 		const deleteAllUsersUrl = `http://localhost:8094/iob/admin/users/${user.domain}/${user.email}`;
 		console.log(deleteAllUsersUrl);
@@ -98,7 +115,7 @@ const Adminn = (props) => {
 						<button onClick={getAllUsers}>Get All Users</button>
 					</Col>
 					<Col sm={4}>
-						<button>Get All Activities</button>
+						<button onClick={getAllActivities}>Get All Activities</button>
 					</Col>
 				</Row>
 				<hr />

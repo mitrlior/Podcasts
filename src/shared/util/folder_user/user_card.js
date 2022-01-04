@@ -11,7 +11,7 @@ const SingleUser = (props) => {
   return(
     <div>
     <div className="usercard-box">
-      <h2>Name: {props.name}</h2>
+      <h2>Name: {props.username}</h2>
       <Container>
       <Row>
           <Col sm={0}>
