@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-grid-system';
 import { useSelector } from 'react-redux';
 import axios from 'axios';
-import userElement from '../components/UIElements/UserElement';
 import AllUsers from '../components/AllUsers';
 
 const Adminn = (props) => {
@@ -30,17 +29,51 @@ const Adminn = (props) => {
 	};
 
 	const deleteAllUsers = () => {
-		const getAllUsersUrl = `http://localhost:8094/iob/admin/users/${user.domain}/${user.email}`;
-		console.log(getAllUsersUrl);
+		const deleteAllUsersUrl = `http://localhost:8094/iob/admin/users/${user.domain}/${user.email}`;
+		console.log(deleteAllUsersUrl);
 		const config = {
 			headers: {
 				'Content-Type': 'application/json',
 			},
 		};
-		axios.delete(getAllUsersUrl, config).then((res) => {
+		axios.delete(deleteAllUsersUrl, config).then((res) => {
 			console.log(res.data);
 			if (res.status === 200) {
 				window.alert('All users deleted');
+			}
+		});
+	};
+
+	const deleteAllActivities = () => {
+		const deleteAllActivitiesUrl = `http://localhost:8094/iob/admin/activities/${user.domain}/${user.email}`;
+
+		console.log(deleteAllActivitiesUrl);
+		const config = {
+			headers: {
+				'Content-Type': 'application/json',
+			},
+		};
+		axios.delete(deleteAllActivitiesUrl, config).then((res) => {
+			console.log(res.data);
+			if (res.status === 200) {
+				window.alert('All activities deleted');
+			}
+		});
+	};
+
+	const deleteAllInstances = () => {
+		const deleteAllInstancesUrl = `http://localhost:8094/iob/admin/activities/${user.domain}/${user.email}`;
+
+		console.log(deleteAllInstancesUrl);
+		const config = {
+			headers: {
+				'Content-Type': 'application/json',
+			},
+		};
+		axios.delete(deleteAllInstancesUrl, config).then((res) => {
+			console.log(res.data);
+			if (res.status === 200) {
+				window.alert('All instances deleted');
 			}
 		});
 	};
@@ -54,10 +87,10 @@ const Adminn = (props) => {
 						<button onClick={deleteAllUsers}>Delete All Users</button>
 					</Col>
 					<Col sm={4}>
-						<button>Delete All Instances</button>
+						<button onClick={deleteAllInstances}>Delete All Instances</button>
 					</Col>
 					<Col sm={4}>
-						<button>Delete All Activities</button>
+						<button onClick={deleteAllActivities}>Delete All Activities</button>
 					</Col>
 				</Row>
 				<Row>
