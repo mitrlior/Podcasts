@@ -21,8 +21,9 @@ const Podcast = (props) => {
           <Col sm={6}>
             <div>
               <p>
-                {props.pod_type} <b>Type</b> &nbsp; | &nbsp; {props.pod_genre} genre <br/>
-                {props.pod_author}Author <br/>
+                <label>{props.pod_genre} Genre </label><br/>
+                <label><b>{props.pod_author} Author </b><br/></label>
+                
               </p>
               <div>
                 <button id="btn_play"/>
