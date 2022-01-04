@@ -42,6 +42,9 @@ const NavLinks = (props) => {
 			<li>
 					<NavLink to="/userr">Update</NavLink>
 			</li>
+			<li>
+					<NavLink to="/podcast">SinglePod</NavLink>
+			</li>
 		</ul>
 	);
 };

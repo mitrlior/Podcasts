@@ -1,10 +1,13 @@
 import React from 'react';
-import { dumpLogs } from '../Utls';
+// import { dumpLogs } from '../Utls';
 import './Podcast.css';
+import { Container, Row, Col } from 'react-grid-system';
+import ReactPlayer from "react-player";
+
 
 const Podcast = (props) => {
 
-  dumpLogs(props);
+  // dumpLogs(props);
 
   return(
     <div>
@@ -22,8 +25,9 @@ const Podcast = (props) => {
                 {props.pod_author}Author <br/>
               </p>
               <div>
-                <button><img src='src\folder_podcast\heart_icon.png' alt="Like" /></button> 
-                <button><img src='src\folder_podcast\add_icon.png' alt="Add" /></button> 
+                <button id="btn_play"/>
+                <button id="btn_up"/>
+                <button id="btn_dn"/>    
               </div>   
             </div>
           </Col>
