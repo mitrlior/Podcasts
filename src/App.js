@@ -12,6 +12,7 @@ import { useSelector } from 'react-redux';
 import SignOut from './shared/util/SignOut';
 import SignUp from './shared/util/SignUpForm';
 import Adminn from './shared/util/AdminAPI';
+import Userr from './shared/util/UserAPI';
 
 const App = () => {
 	const user = useSelector((state) => state.user);
@@ -28,6 +29,7 @@ const App = () => {
 					<Route path="/adminn" element={<Adminn/>} />
 					<Route path="/signout" element={<SignOut />} />
 					<Route path="/signup" element={<SignUp />} />
+					<Route path="/userr" element={<Userr />} />
 					<Route path="/login" element={<LoginForm />} />
 					<Route path="*" exact={true} element={<Navigate to={'/'} />} />
 				</Routes>
