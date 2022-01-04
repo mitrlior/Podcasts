@@ -46,6 +46,8 @@ const SignUp = () => {
 	};
 	return (
 		<div>
+		 	<h1>Sign-Up</h1>
+      <hr/>
 			<form>
 				<div>
 					<br />
@@ -64,20 +66,18 @@ const SignUp = () => {
 				</div>
 				<br />
 				<div>
-					<label>Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+					<label>Avatar:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
 					<input type="text" name="avatar" value={avatar}></input>
 				</div>
 				<br />
 				{/* <label><checkbox/> is Admin ?</label> */}
 			</form>
-			<br />
-			<br />
 			<input
 				className="button"
 				type="submit"
 				onClick={(event) => handleSubmit(event)}
 			/>
-			<br />
+		<hr/>
 		</div>
 	);
 };

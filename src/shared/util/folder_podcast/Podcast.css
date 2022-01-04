@@ -16,3 +16,33 @@ div{
   text-align: center;
   align-items: center;
 }
+button{
+  margin: 10px;
+  text-align: center !important;
+  padding: 10px;
+  background-position: center;
+}
+
+#btn_up{
+  width:50px;
+  height:50px;
+  background-image: url("tmbup.png");
+  background-size: 36px;
+  background-repeat: no-repeat;
+}
+
+#btn_dn{
+  width:50px;
+  height:50px;
+  background-image: url("tmbdn.png");
+  background-size: 36px;
+  background-repeat: no-repeat;
+}
+
+#btn_play{
+  width:50px;
+  height:50px;
+  background-image: url("play_icon.png");
+  background-size: 75px;
+  background-repeat: no-repeat;
+}

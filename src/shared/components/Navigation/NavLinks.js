@@ -25,14 +25,27 @@ const NavLinks = (props) => {
 				<NavLink to="/adminn">Admin API</NavLink>
 			</li>		
 			<li>
-				<NavLink to="/signup">Signup</NavLink>
+				<NavLink to="/signup">Sign-Up</NavLink>
 			</li>
 			<li>
 				{user.isLoggedIn ? (
 					<NavLink to="/signout">Signout</NavLink>
 				) : (
-					<NavLink to="/login">Signin</NavLink>
+					<NavLink to="/login">Sign-In</NavLink>
 				)}
+			</li>
+			{/* {user.isLoggedIn ? (
+				<li>
+					<NavLink to="/userr">Update</NavLink>
+				</li>):(
+					<p> </p>
+				)
+			} */}
+			<li>
+					<NavLink to="/userr">Update</NavLink>
+			</li>
+			<li>
+					<NavLink to="/podcast">SinglePod</NavLink>
 			</li>
 		</ul>
 	);
