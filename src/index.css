@@ -22,15 +22,34 @@ body {
 h1 {
   color:white;
   font-size: 28px;
-  font-family: Charcoal, sans-serif;
   word-spacing: 1.6px;
   font-weight: 700;
 }
 
+h2{
+  margin: 0px;
+  margin-bottom: 16px;
+}
+
+hr{
+  size: 6px;
+  border-color: rgb(105, 180, 255);
+  width: 45%;
+  margin: 0 25% 0 25%;
+}
+
 button{
-  padding: 4px 30px;
-  background-color: #52affc;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  size: 36px;
   color: white;
+
+  margin: 10px;
+  margin-bottom: 18px;
+  padding: 6px 36px;
+
+  background-color: #2196f7;
+  border-radius: 6px;
+  border-color: #2196f7;  
 }
 
 .slide-in-left-enter {

@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { useSelector } from 'react-redux';
-
 import "./NavLinks.css";
 
 const NavLinks = (props) => {
@@ -19,6 +18,9 @@ const NavLinks = (props) => {
 			</li>
 			<li>
 				<NavLink to="/podcasts/new">Add Podcast</NavLink>
+			</li>		
+			<li>
+				<NavLink to="/adminn">Admin API</NavLink>
 			</li>		
 			<li>
 				<NavLink to="/signup">Signup</NavLink>

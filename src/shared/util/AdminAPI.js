@@ -1,11 +1,8 @@
 import React from 'react';
-import { dumpLogs } from '../Utls';
 import { Container, Row, Col } from 'react-grid-system';
 
 
 const Adminn = (props) => {
-
-  dumpLogs(props);
 
   return(
     <div className="Adminn">
