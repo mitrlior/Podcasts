@@ -10,11 +10,11 @@ const AllUsers = (props) => {
 				{props.usersList.map((item) => {
 					return (
 						<UserElement
-						username={item.username}
-						email={item.username}
-						avatar={item.avatar}
-						domain={item.domain}
-					/>
+							username={item.username}
+							email={item.email}
+							avatar={item.avatar}
+							domain={item.domain}
+						/>
 					);
 				})}
 			</ul>

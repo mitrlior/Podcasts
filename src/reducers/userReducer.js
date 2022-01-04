@@ -15,6 +15,7 @@ const userReducer = (
         username: action.payload.username,
         email: action.payload.userId.email,
         domain: action.payload.userId.domain,
+        avatar: action.payload.avatar,
         isLoggedIn: true,
       });
     case "SIGN_OUT":
