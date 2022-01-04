@@ -28,7 +28,7 @@ const Adminn = (props) => {
 		});
 	};
 
-  // const getAllActivities = () => {
+  // const getAllInstances = () => {
   //   const getAllActivitiesUrl = `http://localhost:8094/iob/admin/users/${user.domain}/${user.email}`;
 	// 	console.log(getAllActivitiesUrl);
 	// 	const config = {
