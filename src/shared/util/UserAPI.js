@@ -44,59 +44,52 @@ const Userr = (props) => {
 				<Row>
 					<Col sm={12}>
 						<label>
-							Username:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						</label>
+							Username: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						</label>	
 						<input
 							type="text"
 							name="name"
 							value={username}
-							onChange={(event) => setUsername(event.target.value)}
-						></input>
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						{/* <button>Update</button> */}
+							onChange={(event) => setUsername(event.target.value)}/>
 					</Col>
 				</Row>
 				<Row>
 					<Col sm={12}>
-						<label>Domain:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+						<label>Domain: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
 						<input
 							type="text"
 							name="domain"
 							value={email}
-							onChange={(event) => setEmail(event.target.value)}
-						></input>
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						{/* <button>Update</button> */}
+							onChange={(event) => setEmail(event.target.value)}/>
 					</Col>
 				</Row>
 				<Row>
 					<Col sm={12}>
 						<label>
-							Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							Email: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						</label>
 						<input
 							type="text"
 							name="Email"
 							value={domain}
-							onChange={(event) => setDomain(event.target.value)}
-						></input>
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						{/* <button>Update</button> */}
+							onChange={(event) => setDomain(event.target.value)}/>
 					</Col>
 				</Row>
 				<Row>
 					<Col sm={12}>
 						<label>
-							Avatar:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							Avatar: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						</label>
 						<input
 							type="text"
 							name="username"
 							value={'Avatar'}
-							onChange={(event) => setUsername(event.target.value)}
-						></input>
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<button onClick={handleSubmit}>Update</button>
+							onChange={(event) => setUsername(event.target.value)}/>
+					</Col>
+				</Row>
+				<Row>
+					<Col sm={12}>
+					<button onClick={handleSubmit}>Update</button>
 					</Col>
 				</Row>
 			</Container>

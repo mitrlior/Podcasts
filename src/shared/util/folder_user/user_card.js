@@ -10,17 +10,10 @@ const SingleUser = (props) => {
 	return (
 		<div>
 			<div className="usercard-box">
-				<h2>Name: {user.username}</h2>
+				<h2>Username: {user.username}</h2>
 				<Container>
 					<Row>
-						<Row>
-							<Col sm={0}>username: {user.username}</Col>
-						</Row>
-						<br />
-						<Col sm={0}>
-							<b>Email: {user.email}</b>
-							{/* <br /> */}
-						</Col>
+						<Col sm={0}><b>Email: {user.email}</b></Col>
 					</Row>
 					<Row>
 						<Col sm={0}>Domain: {user.domain}</Col>

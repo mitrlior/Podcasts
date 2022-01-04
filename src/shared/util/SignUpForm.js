@@ -79,7 +79,7 @@ const SignUp = () => {
 				</div>
 				<br />
 				<div>
-					<label>Role:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+					<label>Role:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
 					<input
 						type="text"
 						name="role"

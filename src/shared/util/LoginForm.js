@@ -40,12 +40,11 @@ const LoginForm = () => {
 				<div />
 			) : (
 				<div>
-					<h1>Sign-Up</h1>
+					<h1>Sign-In</h1>
 					<hr />
 					<form>
 						<label>
-							{/* <br /> */}
-							Email: &nbsp;&nbsp;&nbsp;&nbsp;;
+							Email: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 							<input
 								type="text"
 								name="email"
@@ -61,8 +60,7 @@ const LoginForm = () => {
 								type="text"
 								name="domain"
 								value={domain}
-								onChange={(event) => setDomain(event.target.value)}
-							/>
+								onChange={(event) => setDomain(event.target.value)}/>
 						</label>
 					</form>
 				</div>
