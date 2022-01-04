@@ -1,5 +1,6 @@
 import React from 'react';
 import UserElement from './UIElements/UserElement';
+// import SingleUser from './src/shared/util/folder_user/user_card'
 
 const AllUsers = (props) => {
 	return (
@@ -8,7 +9,7 @@ const AllUsers = (props) => {
 			<ul>
 				{props.usersList.map((item) => {
 					return (
-						<SingleUser
+						<UserElement
 						username={item.username}
 						email={item.username}
 						avatar={item.avatar}
