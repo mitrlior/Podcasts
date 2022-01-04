@@ -1,14 +1,14 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import axios from 'axios';
 
-import "./NavLinks.css";
+import './NavLinks.css';
 
 const NavLinks = (props) => {
-  const user = useSelector((state) => state.user);
+	const user = useSelector((state) => state.user);
 
-  return (
+	return (
 		<ul className="nav-links">
 			<li>
 				<NavLink to="/" exact>
@@ -20,20 +20,13 @@ const NavLinks = (props) => {
 			</li>
 			<li>
 				<NavLink to="/podcasts/new">Add Podcast</NavLink>
-			</li>		
-			<li>
-				<NavLink to="/adminn">Admin API</NavLink>
-			</li>		
-			<li>
-				<NavLink to="/signup">Sign-Up</NavLink>
 			</li>
-			<li>
-				{user.isLoggedIn ? (
-					<NavLink to="/signout">Signout</NavLink>
-				) : (
-					<NavLink to="/login">Sign-In</NavLink>
-				)}
-			</li>
+			{user.role === 'ADMIN' ? (
+				<li>
+					<NavLink to="/adminn">Admin API</NavLink>
+				</li>
+			) : null}
+
 			{/* {user.isLoggedIn ? (
 				<li>
 					<NavLink to="/userr">Update</NavLink>
@@ -41,11 +34,22 @@ const NavLinks = (props) => {
 					<p> </p>
 				)
 			} */}
+
 			<li>
-					<NavLink to="/userr">Update</NavLink>
+				<NavLink to="/signup">Sign-Up</NavLink>
 			</li>
 			<li>
-					<NavLink to="/podcast">SinglePod</NavLink>
+				<NavLink to="/userr">Update</NavLink>
+			</li>
+			<li>
+				<NavLink to="/podcast">SinglePod</NavLink>
+			</li>
+			<li>
+				{user.isLoggedIn ? (
+					<NavLink to="/signout">Signout</NavLink>
+				) : (
+					<NavLink to="/login">Sign-In</NavLink>
+				)}
 			</li>
 		</ul>
 	);
